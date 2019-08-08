@@ -4,7 +4,9 @@ const Nightmare = require('nightmare');
 const expect = require('chai').expect;
 const axios = require('axios');
 
-let nightmare;
+let nightmare = Nightmare({
+  show: true
+});
 
 const app = express();
 app.use(express.static(path.join(__dirname, '/../public')));
